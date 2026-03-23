@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV virtual | Eva Luna Calle Briceño</title>
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --card: #ffffff;
+      --ink: #1f2937;
+      --muted: #5b6472;
+      --line: #e5e7eb;
+      --accent: #1f4b7a;
+      --accent-soft: #eaf1f8;
+      --tag: #eef3f7;
+      --shadow: 0 10px 30px rgba(0,0,0,.06);
+      --radius: 18px;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 24px; }
+    .hero {
+      background: linear-gradient(180deg, #fbfbfa 0%, #f0f4f8 100%);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 32px;
+      margin-top: 18px;
+    }
+    h1, h2, h3 { margin: 0 0 12px 0; }
+    h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; }
+    h2 { font-size: 1.45rem; margin-top: 34px; }
+    h3 { font-size: 1.05rem; }
+    p { margin: 0 0 14px; }
+    .sub { color: var(--accent); font-weight: 700; margin-bottom: 12px; }
+    .muted { color: var(--muted); }
+    .contact { display: flex; flex-wrap: wrap; gap: 12px 18px; color: var(--muted); font-size: .96rem; margin-top: 14px; }
+    .nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(247,247,245,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      margin-top: 20px;
+    }
+    .nav .inner {
+      max-width: var(--max); margin: 0 auto; padding: 10px 24px;
+      display: flex; gap: 10px; flex-wrap: wrap;
+    }
+    .nav a {
+      text-decoration: none; color: var(--ink);
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 999px; padding: 8px 12px; font-size: .92rem;
+    }
+    .grid { display: grid; gap: 18px; }
+    .grid.two { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .grid.three { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px;
+    }
+    .pillbox { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    .pill {
+      background: var(--tag); color: var(--accent);
+      border: 1px solid #d7e2ee; border-radius: 999px;
+      padding: 6px 10px; font-size: .85rem; font-weight: 600;
+    }
+    .exp-head { display: flex; align-items: start; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+    .meta { color: var(--muted); font-size: .92rem; }
+    ul { margin: 10px 0 0 18px; padding: 0; }
+    li { margin-bottom: 8px; }
+    .anchor { position: relative; top: -90px; visibility: hidden; }
+    .footer { color: var(--muted); padding: 36px 0 12px; font-size: .92rem; }
+    @media (max-width: 640px) {
+      .hero { padding: 24px; }
+      .wrap { padding: 16px; }
+      .nav .inner { padding: 10px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="sub">CV virtual navegable</div>
+      <h1>Eva Luna Calle Briceño</h1>
+      <p><strong>Estudiante de Economía | Soporte analítico, administrativo y comercial</strong></p>
+      <p class="muted">Perfil orientado a análisis de información, soporte institucional, atención a usuarios, coordinación de proyectos y trabajo con herramientas digitales.</p>
+      <div class="contact">
+        <span>Piura, Perú</span>
+        <span>+51 936 306 206</span>
+        <span>e.luna.cb07@gmail.com</span>
+        <span>LinkedIn</span>
+      </div>
+    </section>
+  </div>
+
+  <nav class="nav">
+    <div class="inner">
+      <a href="#perfil">Perfil</a>
+      <a href="#mapa">Perfiles</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#educacion">Educación</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#certificaciones">Certificaciones</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <span class="anchor" id="perfil"></span>
+    <section>
+      <h2>Perfil profesional</h2>
+      <div class="card">
+        <p>Estudiante de Economía de la Universidad Nacional de Piura, perteneciente al décimo superior y actualmente en 9.º ciclo, con experiencia en análisis de información, soporte administrativo, atención a usuarios, gestión documentaria, coordinación de proyectos y trabajo con herramientas digitales.</p>
+        <p>Manejo Excel, Word, PowerPoint, Python, Stata, EViews y Power BI, con capacidad para sistematizar información, elaborar reportes, sostener procesos y adaptarme a distintos contextos de trabajo con orden, criterio y responsabilidad.</p>
+      </div>
+    </section>
+
+    <span class="anchor" id="mapa"></span>
+    <section>
+      <h2>Mapa de perfiles</h2>
+      <div class="grid three">
+        <article class="card">
+          <h3>Banca y análisis</h3>
+          <p class="muted">Lectura útil para roles con foco en control, análisis, seguimiento de información y criterio cuantitativo.</p>
+          <div class="pillbox">
+            <span class="pill">Python</span>
+            <span class="pill">Excel</span>
+            <span class="pill">riesgo</span>
+            <span class="pill">reportes</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Soporte administrativo</h3>
+          <p class="muted">Adecuado para funciones de documentación, trazabilidad, coordinación y orden institucional.</p>
+          <div class="pillbox">
+            <span class="pill">documentos</span>
+            <span class="pill">bases de datos</span>
+            <span class="pill">seguimiento</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Ventas y atención</h3>
+          <p class="muted">Foco en comunicación con usuarios, seguimiento de contactos y apoyo comercial básico.</p>
+          <div class="pillbox">
+            <span class="pill">WhatsApp</span>
+            <span class="pill">correo</span>
+            <span class="pill">claridad</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Digitación y control</h3>
+          <p class="muted">Perfil visible en tareas de actualización de registros, consistencia de datos y precisión operativa.</p>
+          <div class="pillbox">
+            <span class="pill">registros</span>
+            <span class="pill">control</span>
+            <span class="pill">precisión</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Tutoría y formación</h3>
+          <p class="muted">Experiencia en acompañamiento, estructura de sesiones y adaptación a distintos públicos.</p>
+          <div class="pillbox">
+            <span class="pill">enseñanza</span>
+            <span class="pill">liderazgo</span>
+            <span class="pill">disciplina</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Programación y analítica</h3>
+          <p class="muted">Aplicación de Python a análisis financiero, automatización básica y estructuración de proyectos propios.</p>
+          <div class="pillbox">
+            <span class="pill">Python</span>
+            <span class="pill">datos</span>
+            <span class="pill">modelos</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <span class="anchor" id="experiencia"></span>
+    <section>
+      <h2>Experiencia relevante</h2>
+      <div class="grid two">
+        <article class="card">
+          <div class="exp-head">
+            <div>
+              <h3>Practicante preprofesional en UGEL Chulucanas – oficina de UPDI</h3>
+              <div class="meta">2026 · Chulucanas, Piura</div>
+            </div>
+          </div>
+          <p><strong>Enfoque principal:</strong> soporte administrativo, gestión documentaria y organización institucional.</p>
+          <ul>
+            <li>Gestión de documentación y bases de datos vinculadas a instituciones educativas.</li>
+            <li>Sistematización de información para el inicio del año escolar 2026.</li>
+            <li>Apoyo en elaboración y seguimiento de documentos del área.</li>
+          </ul>
+          <div class="pillbox">
+            <span class="pill">Excel</span><span class="pill">seguimiento</span><span class="pill">control institucional</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="exp-head">
+            <div>
+              <h3>Coordinación de proyectos académicos – Círculo de Capital Social y Liderazgo Académico</h3>
+              <div class="meta">2025 – presente · Piura</div>
+            </div>
+          </div>
+          <p><strong>Enfoque principal:</strong> coordinación de actores, estructura de proyectos y cumplimiento de objetivos.</p>
+          <ul>
+            <li>Diseño de propuesta institucional con plan anual y portafolio mínimo viable.</li>
+            <li>Coordinación de docentes, egresados y estudiantes para implementación.</li>
+            <li>Seguimiento de actividades y organización de información.</li>
+          </ul>
+          <div class="pillbox">
+            <span class="pill">coordinación</span><span class="pill">planificación</span><span class="pill">comunicación</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="exp-head">
+            <div>
+              <h3>Soporte documentario y operaciones financieras – Empresa confidencial</h3>
+              <div class="meta">Rol breve remoto · Remoto</div>
+            </div>
+          </div>
+          <p><strong>Enfoque principal:</strong> control de registros, facturación y soporte de operaciones.</p>
+          <ul>
+            <li>Recepción, revisión y registro de facturas.</li>
+            <li>Actualización de pagos con montos, vencimientos y estatus.</li>
+            <li>Apoyo en control y seguimiento diario.</li>
+          </ul>
+          <div class="pillbox">
+            <span class="pill">facturas</span><span class="pill">pagos</span><span class="pill">precisión</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="exp-head">
+            <div>
+              <h3>Soporte administrativo y atención a usuarios – Empresa confidencial</h3>
+              <div class="meta">Rol breve remoto · Remoto</div>
+            </div>
+          </div>
+          <p><strong>Enfoque principal:</strong> atención al usuario, seguimiento de contacto y organización de información.</p>
+          <ul>
+            <li>Respuesta a consultas por WhatsApp, correo, chat y otros canales digitales.</li>
+            <li>Gestión y actualización de bases de datos de contacto.</li>
+            <li>Verificación de teléfonos, correos, estatus e información clave.</li>
+          </ul>
+          <div class="pillbox">
+            <span class="pill">atención</span><span class="pill">seguimiento</span><span class="pill">bases de datos</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="exp-head">
+            <div>
+              <h3>Analista junior de portafolios – Proyecto propio</h3>
+              <div class="meta">2025 · Remoto</div>
+            </div>
+          </div>
+          <p><strong>Enfoque principal:</strong> análisis financiero, uso de Python y criterio cuantitativo.</p>
+          <ul>
+            <li>Construcción y comparación de carteras multiactivo.</li>
+            <li>Evaluación de riesgo, diversificación y desempeño.</li>
+            <li>Desarrollo de criterios de selección y rebalanceo.</li>
+          </ul>
+          <div class="pillbox">
+            <span class="pill">Python</span><span class="pill">riesgo</span><span class="pill">análisis financiero</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="exp-head">
+            <div>
+              <h3>Gestión de contenidos y marketing digital – Proyecto propio</h3>
+              <div class="meta">2025 · Remoto</div>
+            </div>
+          </div>
+          <p><strong>Enfoque principal:</strong> comunicación digital, contenido y posicionamiento.</p>
+          <ul>
+            <li>Desarrollo de una landing page con enfoque en conversión.</li>
+            <li>Apoyo en elaboración de contenidos y materiales digitales.</li>
+            <li>Trabajo sobre segmentación, comunicación y posicionamiento.</li>
+          </ul>
+          <div class="pillbox">
+            <span class="pill">marketing digital</span><span class="pill">landing page</span><span class="pill">segmentación</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="exp-head">
+            <div>
+              <h3>Entrenadora y coordinadora deportiva – Escuela de Karate Shotokan Chulucanas</h3>
+              <div class="meta">2019 – 2020 · Chulucanas, Piura</div>
+            </div>
+          </div>
+          <p><strong>Enfoque principal:</strong> enseñanza, liderazgo de grupos y disciplina formativa.</p>
+          <ul>
+            <li>Entrenamiento de niñas, niños y adolescentes en karate.</li>
+            <li>Adaptación de sesiones según edad y nivel.</li>
+            <li>Coordinación con madres, padres y dirección de la academia.</li>
+          </ul>
+          <div class="pillbox">
+            <span class="pill">enseñanza</span><span class="pill">liderazgo</span><span class="pill">disciplina</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <span class="anchor" id="educacion"></span>
+    <section>
+      <h2>Educación</h2>
+      <div class="card">
+        <h3>Universidad Nacional de Piura (UNP)</h3>
+        <p><strong>Economía (en curso, 9.º ciclo)</strong></p>
+        <p>Décimo superior de la carrera. Formación en econometría, estadística, análisis de datos, economía financiera e investigación aplicada.</p>
+      </div>
+    </section>
+
+    <span class="anchor" id="habilidades"></span>
+    <section>
+      <h2>Habilidades técnicas y fortalezas</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Habilidades técnicas</h3>
+          <div class="pillbox">
+            <span class="pill">Excel</span>
+            <span class="pill">Word</span>
+            <span class="pill">PowerPoint</span>
+            <span class="pill">Python</span>
+            <span class="pill">Stata</span>
+            <span class="pill">EViews</span>
+            <span class="pill">Power BI</span>
+            <span class="pill">Google Sheets</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Fortalezas clave</h3>
+          <div class="pillbox">
+            <span class="pill">organización</span>
+            <span class="pill">seguimiento</span>
+            <span class="pill">precisión</span>
+            <span class="pill">aprendizaje rápido</span>
+            <span class="pill">comunicación clara</span>
+            <span class="pill">adaptabilidad</span>
+            <span class="pill">responsabilidad</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="anchor" id="certificaciones"></span>
+    <section>
+      <h2>Idiomas y certificaciones</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Idiomas</h3>
+          <ul>
+            <li>Español: nativo</li>
+            <li>Inglés: intermedio-avanzado</li>
+            <li>Japonés: básico</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Certificaciones</h3>
+          <ul>
+            <li>Cinturón Negro Federado en Karate – Federación Peruana de Karate (2019)</li>
+            <li>Árbitra Federada de Karate – Federación Peruana de Karate (2024)</li>
+            <li>Curso de Personal Trainer y Fitness (200 horas) – IFIC Institute, Valencia, España (2022)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      Este CV virtual está pensado para lectura rápida y navegación por bloques. Funciona bien como base para GitHub Pages, portafolio web simple o enlace compartible.
+    </div>
+  </main>
+</body>
+</html>
