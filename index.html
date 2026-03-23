@@ -27,6 +27,11 @@
       color: var(--ink);
       line-height: 1.65;
     }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
     .wrap { max-width: var(--max); margin: 0 auto; padding: 24px; }
     .hero {
       background: linear-gradient(180deg, #fbfbfa 0%, #f0f4f8 100%);
@@ -36,6 +41,12 @@
       padding: 32px;
       margin-top: 18px;
     }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 24px;
+      align-items: center;
+    }
     h1, h2, h3 { margin: 0 0 12px 0; }
     h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; }
     h2 { font-size: 1.45rem; margin-top: 34px; }
@@ -43,7 +54,75 @@
     p { margin: 0 0 14px; }
     .sub { color: var(--accent); font-weight: 700; margin-bottom: 12px; }
     .muted { color: var(--muted); }
-    .contact { display: flex; flex-wrap: wrap; gap: 12px 18px; color: var(--muted); font-size: .96rem; margin-top: 14px; }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      color: var(--muted);
+      font-size: .96rem;
+      margin-top: 14px;
+    }
+    .contact a {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 12px;
+      color: var(--ink);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+    .contact .plain {
+      background: transparent;
+      border: none;
+      padding: 0;
+      border-radius: 0;
+      color: var(--muted);
+      font-weight: 400;
+      pointer-events: none;
+    }
+    .photo-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .photo-card {
+      width: 200px;
+      height: 240px;
+      border-radius: 24px;
+      border: 1.5px dashed #c5d0db;
+      background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      display: none;
+    }
+    .photo-placeholder {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+    .photo-placeholder strong {
+      display: block;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .photo-tip {
+      margin-top: 8px;
+      font-size: .82rem;
+      color: var(--muted);
+    }
     .nav {
       position: sticky; top: 0; z-index: 10;
       background: rgba(247,247,245,.92);
@@ -79,25 +158,46 @@
     li { margin-bottom: 8px; }
     .anchor { position: relative; top: -90px; visibility: hidden; }
     .footer { color: var(--muted); padding: 36px 0 12px; font-size: .92rem; }
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .photo-wrap { justify-content: flex-start; }
+    }
     @media (max-width: 640px) {
       .hero { padding: 24px; }
       .wrap { padding: 16px; }
       .nav .inner { padding: 10px 16px; }
+      .photo-card { width: 170px; height: 205px; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <section class="hero">
-      <div class="sub">CV virtual navegable</div>
-      <h1>Eva Luna Calle Briceño</h1>
-      <p><strong>Estudiante de Economía | Soporte analítico, administrativo y comercial</strong></p>
-      <p class="muted">Perfil orientado a análisis de información, soporte institucional, atención a usuarios, coordinación de proyectos y trabajo con herramientas digitales.</p>
-      <div class="contact">
-        <span>Piura, Perú</span>
-        <span>+51 936 306 206</span>
-        <span>e.luna.cb07@gmail.com</span>
-        <span>LinkedIn</span>
+      <div class="hero-grid">
+        <div>
+          <div class="sub">CV virtual navegable</div>
+          <h1>Eva Luna Calle Briceño</h1>
+          <p><strong>Estudiante de Economía | Soporte analítico, administrativo y comercial</strong></p>
+          <p class="muted">Perfil orientado a análisis de información, soporte institucional, atención a usuarios, coordinación de proyectos y trabajo con herramientas digitales.</p>
+          <div class="contact">
+            <span class="plain">Piura, Perú</span>
+            <a href="tel:+51936306206">+51 936 306 206</a>
+            <a href="mailto:e.luna.cb07@gmail.com">e.luna.cb07@gmail.com</a>
+            <a href="https://www.linkedin.com/in/evaluna-calle-brice%C3%B1o-108719305" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/Luna07-zh" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <div class="photo-wrap">
+          <div class="photo-card" id="photoCard">
+            <img id="profilePhoto" src="foto-perfil.jpg" alt="Foto de Eva Luna Calle Briceño" />
+            <div class="photo-placeholder" id="photoPlaceholder">
+              <strong>Espacio para foto</strong>
+              Coloca tu imagen en esta misma carpeta con el nombre <code>foto-perfil.jpg</code>.
+              <div class="photo-tip">También puedes cambiar el nombre del archivo dentro del HTML si luego quieres usar otro.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -386,5 +486,20 @@
       Este CV virtual está pensado para lectura rápida y navegación por bloques. Funciona bien como base para GitHub Pages, portafolio web simple o enlace compartible.
     </div>
   </main>
+
+  <script>
+    (function () {
+      const img = document.getElementById('profilePhoto');
+      const placeholder = document.getElementById('photoPlaceholder');
+      img.addEventListener('load', function () {
+        img.style.display = 'block';
+        placeholder.style.display = 'none';
+      });
+      img.addEventListener('error', function () {
+        img.style.display = 'none';
+        placeholder.style.display = 'block';
+      });
+    })();
+  </script>
 </body>
 </html>
